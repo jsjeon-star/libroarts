@@ -22,10 +22,10 @@ html,body{width:100%;height:100%;overflow:hidden;font-family:"Noto Sans KR",sans
 .page{width:100%;height:100vh;scroll-snap-align:start;scroll-snap-stop:always;position:relative;overflow:hidden;display:flex;flex-direction:column;}
 
 /* ── NAV ── */
-nav{position:fixed;top:0;left:0;right:0;height:var(--nav-h);z-index:900;transition:background .4s,border-color .4s;}
+nav{position:fixed;top:0;left:0;right:0;height:var(--nav-h);z-index:900;background:#000;border-bottom:1px solid rgba(201,169,110,.15);}
 nav{background:rgba(28,26,24,.96);backdrop-filter:blur(16px);border-bottom:1px solid rgba(201,169,110,.18);}
-nav.dark{background:rgba(28,26,24,.96);}
-nav.light{background:rgba(28,26,24,.96);}
+nav.dark{background:#000;}
+nav.light{background:#000;}
 .nav-wrap{max-width:1400px;margin:0 auto;padding:0 48px;height:100%;display:flex;align-items:center;justify-content:space-between;}
 .logo{cursor:pointer;text-decoration:none;display:flex;align-items:center;}
 .logo-img{height:34px;width:auto;object-fit:contain;transition:filter .3s,opacity .2s;}

@@ -532,7 +532,7 @@ footer{
   border-top:1px solid rgba(201,169,110,.15);
 }
 .p5-branch-head{margin-bottom:18px;}
-.p5-branch-title{font-family:"Noto Sans KR",sans-serif;font-size:clamp(16px,1.6vw,22px);font-weight:700;color:#1a1714;margin-top:8px;}
+.p5-branch-title{font-family:"Noto Sans KR",sans-serif;font-size:clamp(20px,2.2vw,32px);font-weight:700;color:#1a1714;margin-top:8px;}
 .region-tabs{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:18px;}
 .rtab{
   padding:6px 14px;background:rgba(255,255,255,.7);
@@ -658,10 +658,10 @@ html,body{overflow-x:hidden;overflow-y:auto;height:auto;background:#f5f0e8;}
 .franchise-wrap{padding-top:var(--nav-h);}
 .fr-proc{
   padding:60px 80px 48px;background:rgba(255,252,248,0.88);
+  border-top:1px solid rgba(184,147,90,.2);
 }
 .fr-branch{
   padding:40px 80px 48px;background:rgba(250,246,240,0.92);
-  border-top:1px solid rgba(184,147,90,.2);
 }
 @media(max-width:1024px){
   .fr-proc{padding:40px 40px 32px;}
@@ -697,7 +697,6 @@ body {
   </div>
 </nav>
 <div class="drawer" id="drawer">
-  <p class="dr-label">메뉴</p>
   <ul class="dr-links">
     <li><a href="index.html">홈</a></li>
     <li><a href="programs.html">교육프로그램</a></li>
@@ -705,36 +704,9 @@ body {
   </ul>
   <div class="dr-cta">
     <a href="tel:18332477" class="dr-phone">☎ 1833-2477</a>
-    <a href="http://pf.kakao.com/_yxoCrK" target="_blank" class="dr-kakao">💬 카카오채널 상담하기</a>
   </div>
 </div>
 <div class="franchise-wrap">
-
-  <!-- 개설절차 -->
-  <div class="fr-proc">
-    <div class="p5-head" style="margin-bottom:32px;">
-      <div class="p5-eyebrow">Opening Procedure</div>
-      <h2 class="p5-title">개설절차 <span>&</span> 상담안내</h2>
-      
-    </div>
-    <div class="proc-steps">
-      <div class="proc-step"><div class="proc-num">01</div><div class="proc-label">개설문의<br><small>(전화)</small></div></div>
-      <div class="proc-arrow">→</div>
-      <div class="proc-step"><div class="proc-num">02</div><div class="proc-label">설명회 및<br>정보공개서 검토</div></div>
-      <div class="proc-arrow">→</div>
-      <div class="proc-step"><div class="proc-num">03</div><div class="proc-label">가맹계약서<br>작성</div></div>
-      <div class="proc-arrow">→</div>
-      <div class="proc-step"><div class="proc-num">04</div><div class="proc-label">인테리어<br>진행</div></div>
-      <div class="proc-arrow">→</div>
-      <div class="proc-step"><div class="proc-num">05</div><div class="proc-label">교육</div></div>
-      <div class="proc-arrow">→</div>
-      <div class="proc-step"><div class="proc-num">06</div><div class="proc-label">개원</div></div>
-    </div>
-    <div class="p5-contact-bar" style="margin-top:32px;">
-      <span class="p5-contact-label">상담전화</span>
-      <a href="tel:18332477" class="p5-contact-num">1833-2477</a>
-    </div>
-  </div>
 
   <!-- 교육원 찾기 -->
   <div class="fr-branch">
@@ -759,6 +731,32 @@ body {
       <button class="rtab" onclick="filterBranch(this,'제주')">제주</button>
     </div>
     <div class="branch-list" id="branchList" style="max-height:none;"></div>
+  </div>
+
+  <!-- 개설절차 -->
+  <div class="fr-proc">
+    <div class="p5-head" style="margin-bottom:32px;">
+      <div class="p5-eyebrow">Opening Procedure</div>
+      <h2 class="p5-title">개설절차 <span>&</span> 상담안내</h2>
+
+    </div>
+    <div class="proc-steps">
+      <div class="proc-step"><div class="proc-num">01</div><div class="proc-label">개설문의<br><small>(전화)</small></div></div>
+      <div class="proc-arrow">→</div>
+      <div class="proc-step"><div class="proc-num">02</div><div class="proc-label">설명회 및<br>정보공개서 검토</div></div>
+      <div class="proc-arrow">→</div>
+      <div class="proc-step"><div class="proc-num">03</div><div class="proc-label">가맹계약서<br>작성</div></div>
+      <div class="proc-arrow">→</div>
+      <div class="proc-step"><div class="proc-num">04</div><div class="proc-label">인테리어<br>진행</div></div>
+      <div class="proc-arrow">→</div>
+      <div class="proc-step"><div class="proc-num">05</div><div class="proc-label">교육</div></div>
+      <div class="proc-arrow">→</div>
+      <div class="proc-step"><div class="proc-num">06</div><div class="proc-label">개원</div></div>
+    </div>
+    <div class="p5-contact-bar" style="margin-top:32px;">
+      <span class="p5-contact-label">상담전화</span>
+      <a href="tel:18332477" class="p5-contact-num">1833-2477</a>
+    </div>
   </div>
 
   <footer class="site-footer">

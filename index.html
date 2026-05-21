@@ -208,7 +208,7 @@ nav.light .ham span{background:#fff;}
 }
 .p2-card-title{
   font-family:"Noto Sans KR",sans-serif;
-  font-size:13.5px;font-weight:700;color:#111;margin-bottom:8px;
+  font-size:clamp(18px,2vw,22px);font-weight:700;color:#111;margin-bottom:8px;
 }
 .p2-card-body{
   font-family:"Noto Sans KR",sans-serif;
@@ -276,7 +276,7 @@ nav.light .ham span{background:#fff;}
 }
 .p3-card-title{
   font-family:"Noto Sans KR",sans-serif;
-  font-size:13px;font-weight:700;color:#fff;
+  font-size:clamp(16px,1.7vw,20px);font-weight:700;color:#fff;
   line-height:1.5;margin-bottom:10px;
 }
 .p3-card-body{
@@ -608,17 +608,21 @@ footer{
   .ham{display:flex;}
   .drawer{display:block;}
   .nav-wrap{padding:0 28px;}
-  .dots{right:14px;}
+  .dots{display:none;}
   .hero-side{display:none;}
-  #p1{overflow:hidden;}
+  /* ── 모바일 일반 스크롤 ── */
+  html,body{height:auto;overflow-y:auto;}
+  #fp{height:auto;overflow-y:visible;scroll-snap-type:none;}
+  .page{height:auto;min-height:auto;scroll-snap-align:none;scroll-snap-stop:unset;overflow:visible;}
+  #p1{min-height:100vh;overflow:hidden;}
+  #p2,#p3,#p4,#p5c{padding-top:var(--nav-h);}
   .hb-item{padding:0 22px;}
-  .p2-inner{grid-template-columns:1fr;gap:32px;padding:calc(var(--nav-h)+28px) 48px 28px;overflow-y:auto;scrollbar-width:none;height:auto;}
-  .p2-inner::-webkit-scrollbar{display:none;}
+  .p2-inner{grid-template-columns:1fr;gap:32px;padding:28px 48px 28px;margin:0 auto;height:auto;overflow-y:visible;}
   .p2-cards{grid-template-columns:1fr;}
-  .p2-inner{overflow-y:auto;scrollbar-width:none;}
   .p2-card-img{height:100px;}
   .p3-cards{grid-template-columns:repeat(2,1fr);}
-  .p3-inner{overflow-y:auto;scrollbar-width:none;}
+  .p3-inner{overflow-y:visible;}
+  #p5c{overflow-y:visible!important;}
 }
 @media(max-width:640px){
   :root{--nav-h:56px;}
@@ -630,9 +634,9 @@ footer{
   .hb-item{padding:0 14px;}
   .hb-num{font-size:22px;}
   .scroll-hint{display:none;}
-  .p2-inner{padding:calc(var(--nav-h)+16px) 44px 20px;}
-  .p2-body{max-width:100%;padding:0 4px;}
-  .p2-headline{padding:0 4px;}
+  .p2-inner{padding:24px 24px 40px;}
+  .p2-body{max-width:100%;padding:0;}
+  .p2-headline{padding:0;}
   .p2-cards{grid-template-columns:1fr;}
   .p2-words{flex-direction:column;gap:10px;}
   .p2-card-img{height:80px;}
@@ -736,7 +740,6 @@ footer{
   </div>
 </nav>
 <div class="drawer" id="drawer">
-  <p class="dr-label">메뉴</p>
   <ul class="dr-links">
     <li><a href="index.html">홈</a></li>
     <li><a href="programs.html">교육프로그램</a></li>
@@ -744,7 +747,6 @@ footer{
   </ul>
   <div class="dr-cta">
     <a href="tel:18332477" class="dr-phone">☎ 1833-2477</a>
-    <a href="http://pf.kakao.com/_yxoCrK" target="_blank" class="dr-kakao">💬 카카오채널 상담하기</a>
   </div>
 </div>
 <!-- DOTS -->

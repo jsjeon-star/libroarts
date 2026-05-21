@@ -864,7 +864,7 @@ html,body{width:100%;height:100%;overflow:hidden;margin:0;}
 .fp-sec-scroll::-webkit-scrollbar{display:none;}
 
 /* ── GNB ── */
-:root{--gold:#C9A96E;--gold-light:#E2C898;}
+:root{--gold:#C9A96E;--gold-light:#E2C898;--nav-h:68px;}
 .site-header{position:fixed!important;top:0;left:0;right:0;z-index:500!important;background:#000!important;border-bottom:1px solid rgba(201,169,110,.15)!important;backdrop-filter:none!important;}
 .header-inner{height:68px!important;width:min(1280px,calc(100% - 40px))!important;display:grid!important;grid-template-columns:1fr auto 1fr!important;align-items:center!important;}
 .logo-mark,.logo>span{display:none!important;}
@@ -904,11 +904,12 @@ html,body{width:100%;height:100%;overflow:hidden;margin:0;}
 .program-head .section-title{font-size:clamp(20px,2vw,28px)!important;margin:0;}
 .program-head .section-desc{font-size:13px!important;margin-top:6px;}
 .step-box{margin-top:10px!important;padding:12px 16px!important;}
-.step-label{font-size:11px!important;}
+.step-label{font-size:14px!important;padding:11px 20px!important;}
 .program-grid{margin-top:8px!important;gap:10px!important;grid-template-columns:repeat(3,1fr)!important;}
 .step-box:last-of-type .program-grid{grid-template-columns:repeat(2,1fr)!important;}
 .program-card{min-height:auto!important;padding:16px!important;border-radius:16px!important;}
-.program-card h3{font-size:15px!important;margin:4px 0;}
+.program-card h3{font-size:19px!important;margin:4px 0;}
+.program-card h3 em{font-size:13px!important;}
 .program-card h3 em{font-size:11px!important;}
 .program-card p{font-size:12px!important;line-height:1.5!important;margin:4px 0 8px;}
 .program-badge{font-size:10px!important;padding:2px 8px!important;}
@@ -933,6 +934,13 @@ html,body{width:100%;height:100%;overflow:hidden;margin:0;}
 
 @media(max-width:1024px){
   .nav{display:none!important;}
+  /* ── 모바일 일반 스크롤 ── */
+  html,body{height:auto!important;overflow-y:auto!important;}
+  #fp-wrap{height:auto!important;overflow-y:visible!important;scroll-snap-type:none!important;}
+  .fp-sec{min-height:auto!important;scroll-snap-align:none!important;scroll-snap-stop:unset!important;overflow:visible!important;}
+  .fp-sec:first-child{min-height:100vh!important;}
+  .fp-sec-scroll{overflow-y:visible!important;padding-top:var(--nav-h);}
+  .fp-dots{display:none!important;}
 }
 @media(max-width:640px){
   .fp-dots{display:none;}
@@ -945,8 +953,8 @@ html,body{width:100%;height:100%;overflow:hidden;margin:0;}
 
 /* ── 햄버거 버튼 ── */
 .ham-btn{display:none;flex-direction:column;justify-content:center;gap:5px;background:none;border:none;cursor:pointer;padding:8px;justify-self:end;}
-.ham-btn span{display:block;width:22px;height:2px;background:var(--gold);border-radius:2px;transition:all .3s;}
-@media(max-width:1024px){.ham-btn{display:flex;}}
+.ham-btn span{display:block;width:22px;height:1.5px;background:#fff;border-radius:0;transition:all .3s;}
+@media(max-width:1024px){.ham-btn{display:flex;}.header-inner{grid-template-columns:1fr 1fr!important;}}
 
 /* ── 모바일 드로어 ── */
 .mob-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,.5);z-index:600;}
